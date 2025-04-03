@@ -15,6 +15,8 @@ public class Main {
         System.out.println(Arrays.toString(massiv(mas)));
         System.out.println(Arrays.toString(newMassiv()));
         System.out.println(Arrays.toString(returnMassiv(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1})));
+        squareArr();
+        System.out.println(Arrays.toString(oneMassiv(3,7)));
     }
 
     public static boolean isTrue(int a, int b) {
@@ -66,6 +68,33 @@ public class Main {
             if (massiv[i] < 6) {
                 massiv[i] *= 2;
             }
+        }
+        return massiv;
+    }
+
+//10. Написать метод, принимающий на вход два аргумента: len
+//    и initialValue, и возвращающий одномерный массив типа int
+//    длиной len, каждая ячейка которого равна initialValue.
+
+    public static void squareArr() {
+        int count = 7;
+        int[][] table = new int[count][count];
+        for (int i = 0; i < count; i++) {
+            table[i][i] = 1;
+            table[i][(count - 1) - i] = 1;
+        }
+        for (int i = 0; i < count; i++) {
+            for (int j = 0; j < count; j++) {
+                System.out.print(table[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static int[] oneMassiv(int len, int initialValue) {
+        int[] massiv = new int[len];
+        for (int i = 0; i < len; i++) {
+            massiv[i] = initialValue;
         }
         return massiv;
     }
