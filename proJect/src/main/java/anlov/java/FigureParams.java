@@ -1,8 +1,8 @@
 package anlov.java;
 
 public abstract class FigureParams implements Figure {
-    private Colors colorOfBoard;
-    private Colors colorOfFill;
+    private  final Colors colorOfBoard;
+    private  final Colors colorOfFill;
 
     public FigureParams(Colors colorOfBoard, Colors colorOfFill) {
         this.colorOfBoard = colorOfBoard;
