@@ -71,9 +71,6 @@ public class TestClass {
     @Test
     @DisplayName("Проверить заполнение полей и работу кнопки 'Продолжить'")
     void checkContinue() {
-        final String NUMBER = "";
-        final String SUMMA = "25";
-        final String EMAIL = "";
         driver.findElement(By.xpath("//input[@id='connection-phone']")).sendKeys("297777777");
         driver.findElement(By.xpath("//input[@id='connection-sum']")).sendKeys("25");
         driver.findElement(By.xpath("//input[@id='connection-email']")).sendKeys("aston.777@gmai.com");
